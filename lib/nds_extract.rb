@@ -2,7 +2,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 
 def directors_totals(nds)
-  ret_hash= {}
+  ret_hash = {}
   index = 0
   while nds[index] do
     sum = 0
@@ -11,7 +11,7 @@ def directors_totals(nds)
       sum += nds[index][:movies][num_movies][:worldwide_gross]
       num_movies += 1
     end
-    ret_hash[nds[index][:name]]= sum
+    ret_hash[nds[index][:name]] = sum
     index += 1
   end
 
